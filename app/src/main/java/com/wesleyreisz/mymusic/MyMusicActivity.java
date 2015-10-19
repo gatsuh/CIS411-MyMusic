@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import com.wesleyreisz.mymusic.model.Song;
+import com.wesleyreisz.mymusic.service.MockMusicService;
 
 
 public class MyMusicActivity extends Activity {
@@ -12,6 +17,12 @@ public class MyMusicActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_music);
+
+       /* MockMusicService mockmusicservice = new MockMusicService();
+
+        ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.activity_list_item,mockmusicservice.findAll() );
+        ListView    listView = (ListView)findViewById(R.id.list_view);
+        listView.setAdapter(adapter);*/
     }
 
 
